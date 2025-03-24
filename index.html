@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Persegi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Matematik Persegi</h1>
+        
+        <!-- Luas Persegi Section -->
+        <section class="calculator-section">
+            <h2>Hitung Luas Persegi</h2>
+            <div class="input-group">
+                <label for="sisi-luas">Panjang Sisi (cm)</label>
+                <input type="number" id="sisi-luas" step="0.1" required>
+            </div>
+            <button onclick="hitungLuas()">Hitung Luas</button>
+            <div class="result" id="hasil-luas"></div>
+        </section>
+
+        <!-- Keliling Persegi Section -->
+        <section class="calculator-section">
+            <h2>Hitung Keliling Persegi</h2>
+            <div class="input-group">
+                <label for="sisi-keliling">Panjang Sisi (cm)</label>
+                <input type="number" id="sisi-keliling" step="0.1" required>
+            </div>
+            <button onclick="hitungKeliling()">Hitung Keliling</button>
+            <div class="result" id="hasil-keliling"></div>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
