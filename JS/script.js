@@ -41,7 +41,7 @@ function hitungLuas() {
     hasilDiv.style.display = 'none';
 
     if (!validasiInput(sisi)) {
-        tampilkanError(hasilDiv, "Masukkan angka valid yahh, mul 0!");
+        tampilkanError(hasilDiv, "Masukkan angka valid yahh, mulai dari 0!");
         return;
     }
 
@@ -88,6 +88,12 @@ function hitungKeliling() {
 function validasiInput(nilai) {
     return !isNaN(nilai) && nilai > 0;
 }
+
+
+function validasiInput(nilai) {
+    return !isNaN(nilai) && nilai > 0;
+}
+
 
 function tampilkanError(element, pesan) {
     element.innerHTML = `<p class="error">${pesan}</p>`;
@@ -177,4 +183,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.getElementById('kirim-feedback').addEventListener('click', kirimFeedback);
-});
+})
