@@ -41,7 +41,7 @@ function hitungLuas() {
     hasilDiv.style.display = 'none';
 
     if (!validasiInput(sisi)) {
-        tampilkanError(hasilDiv, "Masukkan angka valid yahh, mulai dari 0!");
+        tampilkanError(hasilDiv, "Masukkan angka valid yahh, mul 0!");
         return;
     }
 
