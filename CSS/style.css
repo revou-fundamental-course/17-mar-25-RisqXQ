@@ -105,18 +105,37 @@ body {
 
 .formula-preview {
     display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 1rem;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    justify-content: flex-start; 
+    gap: 1rem; 
+    text-align: left;
+    flex-wrap: nowrap;
 }
 
 .formula-preview img {
-    width: 200px; 
-    filter: drop-shadow(0 0 10px rgba(141, 141, 141, 0.3));
+    max-width: 100%; 
+    height: auto; 
     border-radius: 15px; 
-    border: 2px solid rgba(209, 206, 206, 0.329); 
+    border: 2px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
+.formula-preview span {
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+    .formula-preview {
+        max-width: 160px;
+        width: 100%;
+        height: auto;
+        flex-direction: row; 
+        text-align: left; 
+        gap: 1rem; 
+    }
+}
 
 .glow-input {
     width: 100%;
@@ -335,4 +354,85 @@ textarea#feedback:focus {
 @keyframes appear {
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 1rem; 
+    }
+
+    .logo-border img {
+        height: 80px; 
+        margin-top: 5px;
+    }
+
+    .neon-header h1 {
+        font-size: 1.5rem; 
+    }
+
+    .neon-header p {
+        font-size: 1rem; 
+    }
+
+    .calculator-card {
+        margin: 1rem 0; 
+    }
+
+    .formula-preview img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .glow-input {
+        width: 100%; 
+        font-size: 1rem; 
+    }
+
+    .button-group {
+        flex-direction: column; 
+        gap: 0.5rem; 
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%; 
+    }
+
+    .feedback-section {
+        padding: 1rem; 
+    }
+
+    .rating {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 0.5rem; 
+    }
+
+    .footer {
+        font-size: 0.8rem; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .neon-header h1 {
+        font-size: 1.2rem; 
+    }
+
+    .neon-header p {
+        font-size: 0.9rem; 
+    }
+
+    .calculator-card {
+        padding: 1rem; 
+    }
+
+    .feedback-section h2 {
+        font-size: 1rem; 
+    }
+
+    .star {
+        font-size: 1.5rem; 
+    }
 }
