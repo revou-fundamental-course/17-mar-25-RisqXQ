@@ -1,49 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Persegi</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <meta name="viewport"="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Persegi Modern - RisqiMA</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="logo-border">
+        <img src="https://images2.imgbox.com/23/40/hBidgc23_o.png" alt="Logo Pemilik">
+    </div>
+    
+    <div class="animated-background">
+        <div class="bg-blur"></div>
+        <div class="shape s1"></div>
+        <div class="shape s2"></div>
+        <div class="shape s3"></div>
+    </div>
 
-    <div class="creator-banner">RisqiMA</div>
+    
+    <div class="welcome-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Halo, Selamat Datang!</h2>
+            <br>
+            <p>Situs yang berfungsi untuk menghitung Luas dan Keliling dari Persegi.</p>
+            <button class="modal-close">Mulai Menggunakan</button>
+        </div>
+    </div>
+
+    
+    <div class="neon-header">
+        <h1>Kalkulator Persegi</h1>
+        <p class="subtitle">Hitung Luas dan Keliling dengan Mudah gak usah mikir :)</p>
+    </div>
 
     <div class="container">
-        <h1>Kalkulator Matematik Persegi</h1>
-
-
-        <section class="calculator-section">
-            <h2>Hitung Luas Persegi</h2>
-            <div class="formula-display">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Persegi.png" alt="Luas Formula" class="formula-img">
-                <p class="formula-text">L = S × S</p>
-            </div>
-            <div class="input-group">
-                <label for="sisi-luas">Panjang Sisi (cm)</label>
-                <input type="number" id="sisi-luas" step="0.1" required>
-            </div>
-            <button onclick="hitungLuas()">Hitung Luas</button>
-            <div class="result" id="hasil-luas"></div>
-        </section>
+        <div class="description">
+            <p>Situs ini berfungsi untuk menghitung luas sisi dan keliling dari persegi.</p>
+        </div>
 
        
-        <section class="calculator-section">
-            <h2>Hitung Keliling Persegi</h2>
-            <div class="formula-display">
-                <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1621482846/j072ahdl9eltmsw2adnw.png" alt="Keliling Formula" class="formula-img">
-                <p class="formula-text">K = 4 × S</p>
+        <section class="calculator-card">
+            <div class="card-header">
+                <h2>🔷 Hitung Luas</h2>
+                <div class="formula-preview">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Persegi.png" alt="Rumus Luas">
+                    <span>L = S × S</span>
+                </div>
             </div>
-            <div class="input-group">
-                <label for="sisi-keliling">Panjang Sisi (cm)</label>
-                <input type="number" id="sisi-keliling" step="0.1" required>
+            <div class="card-body">
+                <input type="number" id="sisi-luas" placeholder="Masukkan sisi (cm)" class="glow-input">
+                <div class="button-group">
+                    <button class="btn-primary" onclick="hitungLuas()">Hitung</button>
+                    <button class="btn-secondary" onclick="resetLuas()">Reset</button>
+                </div>
+                <div class="result-box" id="hasil-luas"></div>
             </div>
-            <button onclick="hitungKeliling()">Hitung Keliling</button>
-            <div class="result" id="hasil-keliling"></div>
+        </section>
+
+        
+        <section class="calculator-card">
+            <div class="card-header">
+                <h2>📏 Hitung Keliling</h2>
+                <div class="formula-preview">
+                    <img src="https://cdn.idntimes.com/content-images/post/20211122/persegi-8329ebf93ec604015915fcb94cc0e6ae.jpg" alt="Rumus Keliling">
+                    <span>K = 4 × S</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <input type="number" id="sisi-keliling" placeholder="Masukkan sisi (cm)" class="glow-input">
+                <div class="button-group">
+                    <button class="btn-primary" onclick="hitungKeliling()">Hitung</button>
+                    <button class="btn-secondary" onclick="resetKeliling()">Reset</button>
+                </div>
+                <div class="result-box" id="hasil-keliling"></div>
+            </div>
+        </section>
+
+        <section class="feedback-section">
+            <h2>Beri Rating dan Masukan</h2>
+            <div class="rating">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
+            <textarea id="feedback" placeholder="Masukkan kritik dan saran kamuuu." rows="4"></textarea>
+            <button class="btn-primary" id="kirim-feedback">Kirim</button>
         </section>
     </div>
 
-    <script src="/JS/script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("lkMljirErzFBOhqjP"); 
+        })();
+    </script>
+
+<footer class="footer">
+    <p>&copy; 2025 Developer: <strong>@RisqiMA</strong></p>
+</footer>
+
 </body>
 </html>
