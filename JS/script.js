@@ -49,11 +49,8 @@ function hitungLuas() {
     hasilDiv.innerHTML = `
         <h3>Hasil Luas Persegi</h3>
         <div class="result-content">
-            <img src="https://i.postimg.cc/4y5W3k0T/formula-luas.png" alt="Rumus">
-            <div>
                 <p>L = ${sisi} × ${sisi}</p>
                 <p class="hasil-angka">${luas}<span class="unit"> cm²</span></p>
-            </div>
         </div>
     `;
     hasilDiv.style.display = 'block';
@@ -74,11 +71,8 @@ function hitungKeliling() {
     hasilDiv.innerHTML = `
         <h3>Hasil Keliling Persegi</h3>
         <div class="result-content">
-            <img src="https://i.postimg.cc/TPt6Mh4W/formula-keliling.png" alt="Rumus">
-            <div>
                 <p>K = 4 × ${sisi}</p>
                 <p class="hasil-angka">${keliling}<span class="unit"> cm</span></p>
-            </div>
         </div>
     `;
     hasilDiv.style.display = 'block';
